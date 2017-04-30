@@ -16,6 +16,8 @@
 
 package com.github.slidekb.api;
 
+import java.util.List;
+
 import javax.swing.*;
 
 /**
@@ -36,6 +38,10 @@ public interface SlideBarPlugin {
      * @return
      */
     public String[] getProcessNames();
+
+    public void attachToProcess(String processName);
+
+    public void detachFromProcess(String processName);
 
     /**
      * runs while exe current window or hotkey is being pressed
