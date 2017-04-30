@@ -19,44 +19,48 @@ package com.github.slidekb.api;
 import javax.swing.*;
 
 /**
- * 
  * @author JackSec
- *
  */
 public interface SlideBarPlugin {
 
     /**
      * returns the priority for the plugin
+     * 
      * @return
      */
     public int getPriority();
 
     /**
      * returns either the .exe names or a "toString form of hotkeys" in a list.
+     * 
      * @return
      */
-	public String[] getProcessNames();
+    public String[] getProcessNames();
 
     /**
      * runs while exe current window or hotkey is being pressed
+     * 
      * @param process
      */
     public void run(String process);
 
     /**
      * returns configuration window.
+     * 
      * @return
      */
     public JFrame getConfigWindow();
 
     /**
      * runs on first .exe match or hotkeypress. used to set up run();
+     * 
      * @param process
      */
     public void runFirst(String process);
 
     /**
      * name displayed in master configuration window/ main application.
+     * 
      * @return
      */
     public String getLabelName();
@@ -64,4 +68,10 @@ public interface SlideBarPlugin {
     public JFrame getProcessWindow();
 
     public void reloadPropFile();
+
+    public void setAlphaKeyManager(AlphaKeyManager alphaKeyManager);
+
+    public void setHotKeyManager(HotKeyManager hotKeyManager);
+
+    public void setSlider(Slider slider);
 }
