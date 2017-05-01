@@ -17,6 +17,12 @@
 package com.github.slidekb.api;
 
 public interface Slider {
+	
+	/**
+	 * defines what slider to read and write from based of slider ID.
+	 * @param ID
+	 */
+	public void defineSlider(String ID);
 
     public void bumpRight(int milliseconds);
 
