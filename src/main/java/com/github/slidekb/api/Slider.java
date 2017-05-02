@@ -17,12 +17,6 @@
 package com.github.slidekb.api;
 
 public interface Slider {
-	
-	/**
-	 * defines what slider to read and write from based of slider ID.
-	 * @param ID
-	 */
-	public void defineSlider(String ID);
 
     public void bumpRight(int milliseconds);
 
@@ -65,4 +59,6 @@ public interface Slider {
     public void scrollDown(int amount);
 
     public int getVirtualPartIndex(int parts);
+
+    public void close();
 }

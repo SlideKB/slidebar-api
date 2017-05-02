@@ -16,9 +16,7 @@
 
 package com.github.slidekb.api;
 
-import java.util.List;
-
-import javax.swing.*;
+import javax.swing.JFrame;
 
 /**
  * @author JackSec
@@ -38,6 +36,13 @@ public interface SlideBarPlugin {
      * @return
      */
     public String[] getProcessNames();
+
+    /**
+     * Returns the currently used slider ID, or null for default slider.
+     * 
+     * @return currently used slider ID, or null for default slider
+     */
+    public String currentlyUsedSlider();
 
     public void attachToProcess(String processName);
 
