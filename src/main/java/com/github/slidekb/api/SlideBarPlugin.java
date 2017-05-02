@@ -38,6 +38,13 @@ public interface SlideBarPlugin {
     public String[] getProcessNames();
 
     /**
+     * If true, this plugin uses process names. If false, this plugin uses hotkeys.
+     * 
+     * @return true if processes, false otherwise
+     */
+    public boolean usesProcessNames();
+
+    /**
      * Returns the currently used slider ID, or null for default slider.
      * 
      * @return currently used slider ID, or null for default slider
