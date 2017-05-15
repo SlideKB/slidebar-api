@@ -91,7 +91,5 @@ public interface SlideBarPlugin {
 
     public void setHotKeyManager(HotKeyManager hotKeyManager);
 
-    public void setSlider(Slider slider);
-
 	public void setSliderManager(SliderManager sliderManager);
 }

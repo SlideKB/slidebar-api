@@ -61,4 +61,6 @@ public interface Slider {
     public int getVirtualPartIndex(int parts);
 
     public void close();
+
+	public void setReversed(boolean slider1Reversed);
 }
