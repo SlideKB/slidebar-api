@@ -25,7 +25,7 @@ public interface SlideBarPlugin {
 
     /**
      * returns the priority for the plugin
-     * 
+     * not currently used for anything yet
      * @return
      */
     public int getPriority();
@@ -43,17 +43,13 @@ public interface SlideBarPlugin {
      * @return true if processes, false otherwise
      */
     public boolean usesProcessNames();
-
+    
     /**
-     * Returns the currently used slider ID, or null for default slider.
+     * name displayed in master configuration window/ main application.
      * 
-     * @return currently used slider ID, or null for default slider
+     * @return
      */
-    public String currentlyUsedSlider();
-
-    public void attachToProcess(String processName);
-
-    public void detachFromProcess(String processName);
+    public String getLabelName();
 
     /**
      * runs while exe current window or hotkey is being pressed
@@ -61,14 +57,7 @@ public interface SlideBarPlugin {
      * @param process
      */
     public void run(String process);
-
-    /**
-     * returns configuration window.
-     * 
-     * @return
-     */
-    public JFrame getConfigWindow();
-
+    
     /**
      * runs on first .exe match or hotkeypress. used to set up run();
      * 
@@ -77,19 +66,39 @@ public interface SlideBarPlugin {
     public void runFirst(String process);
 
     /**
-     * name displayed in master configuration window/ main application.
-     * 
+     * returns configuration window.
+     * optional for now
      * @return
      */
-    public String getLabelName();
+    public JFrame getConfigWindow();
+
+    
 
     public JFrame getProcessWindow();
 
+    /**
+     * reloads the property file or whatever file needed when this runs
+     * 
+     */
     public void reloadPropFile();
 
+    /**
+     * sets the alpha key manager
+     * optional
+     * @param alphaKeyManager
+     */
     public void setAlphaKeyManager(AlphaKeyManager alphaKeyManager);
 
+    /**
+     * sets the hot key manager
+     * optional
+     * @param hotKeyManager
+     */
     public void setHotKeyManager(HotKeyManager hotKeyManager);
-
+    
+    /**
+     * sets the SlideBar manager
+     * @param sliderManager
+     */
 	public void setSliderManager(SliderManager sliderManager);
 }
