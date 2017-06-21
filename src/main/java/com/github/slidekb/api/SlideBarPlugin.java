@@ -16,8 +16,6 @@
 
 package com.github.slidekb.api;
 
-import javax.swing.JFrame;
-
 /**
  * @author JackSec
  */
@@ -26,24 +24,11 @@ public interface SlideBarPlugin {
     /**
      * returns the priority for the plugin
      * not currently used for anything yet
+     * 
      * @return
      */
     public int getPriority();
 
-    /**
-     * returns either the .exe names or a "toString form of hotkeys" in a list.
-     * 
-     * @return
-     */
-    public String[] getProcessNames();
-
-    /**
-     * If true, this plugin uses process names. If false, this plugin uses hotkeys.
-     * 
-     * @return true if processes, false otherwise
-     */
-    public boolean usesProcessNames();
-    
     /**
      * name displayed in master configuration window/ main application.
      * 
@@ -53,52 +38,18 @@ public interface SlideBarPlugin {
 
     /**
      * runs while exe current window or hotkey is being pressed
-     * 
-     * @param process
      */
-    public void run(String process);
-    
+    public void run();
+
     /**
      * runs on first .exe match or hotkeypress. used to set up run();
-     * 
-     * @param process
      */
-    public void runFirst(String process);
+    public void runFirst();
 
-    /**
-     * returns configuration window.
-     * optional for now
-     * @return
-     */
-    public JFrame getConfigWindow();
-
-    
-
-    public JFrame getProcessWindow();
-
-    /**
-     * reloads the property file or whatever file needed when this runs
-     * 
-     */
-    public void reloadPropFile();
-
-    /**
-     * sets the alpha key manager
-     * optional
-     * @param alphaKeyManager
-     */
-    public void setAlphaKeyManager(AlphaKeyManager alphaKeyManager);
-
-    /**
-     * sets the hot key manager
-     * optional
-     * @param hotKeyManager
-     */
-    public void setHotKeyManager(HotKeyManager hotKeyManager);
-    
     /**
      * sets the SlideBar manager
+     * 
      * @param sliderManager
      */
-	public void setSliderManager(SliderManager sliderManager);
+    public void setSliderManager(SliderManager sliderManager);
 }
