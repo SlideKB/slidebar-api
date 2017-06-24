@@ -51,5 +51,5 @@ public interface SlideBarPlugin {
      * 
      * @param sliderManager
      */
-    public void setSliderManager(SliderManager sliderManager);
+    public void setSliderManager(Slider slider);
 }
