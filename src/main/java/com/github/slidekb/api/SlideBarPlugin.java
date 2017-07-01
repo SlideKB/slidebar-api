@@ -47,9 +47,11 @@ public interface SlideBarPlugin {
     public void runFirst();
 
     /**
-     * sets the SlideBar manager
+     * sets the SlideBar
      * 
-     * @param sliderManager
+     * @param Slider
      */
-    public void setSlider(Slider slider);
+    public void setSlider(Slider slider, int position);
+    
+    public int numberOfSlidersRequired();
 }
