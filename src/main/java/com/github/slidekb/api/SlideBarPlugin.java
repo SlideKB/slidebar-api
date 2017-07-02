@@ -52,6 +52,6 @@ public interface SlideBarPlugin {
      * @param Slider
      */
     public void setSlider(Slider slider, int position);
-    
+
     public int numberOfSlidersRequired();
 }

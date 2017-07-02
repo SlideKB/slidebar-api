@@ -62,7 +62,7 @@ public interface Slider {
 
     public void close();
 
-	public void setReversed(boolean slider1Reversed);
-	
-	public String getID();
+    public void setReversed(boolean slider1Reversed);
+
+    public String getID();
 }
