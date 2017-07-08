@@ -30,28 +30,38 @@ public interface SlideBarPlugin {
     public int getPriority();
 
     /**
-     * name displayed in master configuration window/ main application.
+     * name displayed in configuration window and main application.
      * 
      * @return
      */
     public String getLabelName();
 
     /**
-     * runs while exe current window or hotkey is being pressed
+     * Ran once when the plugin is loaded. Put code to initialize the plugin in this.
+     */
+    public void setup();
+
+    /**
+     * Runs the main functions of this plugin
      */
     public void run();
 
     /**
-     * runs on first .exe match or hotkeypress. used to set up run();
+     * Runs on process or hotkey change. used to set up run()
      */
     public void runFirst();
 
     /**
-     * sets the SlideBar
+     * Injects the Slider at the set index
      * 
      * @param Slider
      */
-    public void setSlider(Slider slider, int position);
+    public void setSlider(Slider slider, int index);
 
+    /**
+     * The number of sliders this plugin needs
+     * 
+     * @return The number of sliders this plugin needs
+     */
     public int numberOfSlidersRequired();
 }
