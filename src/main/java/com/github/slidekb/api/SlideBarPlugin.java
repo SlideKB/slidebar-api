@@ -42,6 +42,11 @@ public interface SlideBarPlugin {
     public void setup();
 
     /**
+     * Ran once when the plugin is unloaded. Put code to save your plugin's settings or similar in here.
+     */
+    public void teardown();
+
+    /**
      * Runs the main functions of this plugin
      */
     public void run();
